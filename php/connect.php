@@ -1,82 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>IoT Project</title>
-	<meta http-equiv="refresh" content="60"> 
-	<style>
-		table {
-			border-collapse: collapse;
-			width: 100%;
-			margin-top: 20px;
-			align-items:center;
-		}
+<?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "example2";
 
-		th, td {
-			text-align: center;
-			padding: 8px;
-			border: 1px solid black;
-		}
 
-		th {
-			background-color: #4CAF50;
-			color: white;
-		}
-	</style>
-</head>
-<body>
-	<header>
-		<h1>IoT Project</h1>
-	</header>
-	<main>
-		<form action="insert.php" method="get">
 
-			<br>
-			
-			
-			<br>
-			
-		</form>
 
-		<?php
+     //  Connect to MySQL server
+$conn = new mysqli($host, $user, $pass, $db);
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 
-			$dbname = 'example';
-			$dbuser = 'root';  
-			$dbpass = ''; 
-			$dbhost = 'localhost'; 
+        // Retrieve parameters
+$tagId = $_GET['tagId'];
+$latitude = $_GET['latitude'];
+$longitude = $_GET['longitude'];
 
-			$connect = @mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+        // Insert data into MySQL database
+$sql = "INSERT INTO data (tagId, latitude, longitude) VALUES ('$tagId', '$latitude', '$longitude')";
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
-			if(!$connect){
-				echo "Error: " . mysqli_connect_error();
-				exit();
-			}
+     // Close MySQL connection
+$conn->close();
+?>
+<!-- w0B<tX|S>^xHXAU&  sandi dbhost -->
 
-			$temperature = $_GET["temperature"];
-			$humidity = $_GET["humidity"]; 
-
-			$query = "INSERT INTO iot_project (temperature, humidity) VALUES ('$temperature', '$humidity')";
-			$result = mysqli_query($connect,$query);
-
-			if ($result) {
-				echo "<p>Insertion Success!</p>";
-			}
-
-			$query = "SELECT * FROM iot_project";
-			$result = mysqli_query($connect,$query);
-
-			if (mysqli_num_rows($result) > 0) {
-				echo "<table>";
-				echo "<tr><th>Timestamp</th><th>Temperature</th><th>Humidity</th></tr>";
-				while($row = mysqli_fetch_assoc($result)) {
-					echo "<tr><td>".$row["created_at"]."</td><td>".$row["temperature"]."</td><td>".$row["humidity"]."</td></tr>";
-				}
-				echo "</table>";
-			} else {
-				echo "<p>No data available</p>";
-			}
-//u9!Mt}FF7xo#Rtvf
-			mysqli_close($connect);
-		?>
-	</main>
-</body>
-</html>
