@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monitoring ETS</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="ndas">
+            <h2>MY ETS</h2>
+        </div>
+        <div class="name">
+            <div class="title">
+                <h2>MODE</h2>
+            </div>
+            <div class="m">
+                <div class="button">
+                    <a href="" class="btn1">BASKETING</a>
+                    <a href="" class="btn2">ABSEN</a>
+                </div>
+                <div class="button">
+                    <a href="" class="btn3">RACE</a>
+                    <a href="" class="btn4">TRAINING</a>
+                </div>
+            </div>
+        </div>
+        <button class="dulekan">
+            <a href="reset.html">
+                <h2>CONFIGURE WIFI</h2>
+            </a>
+         </button>
+        <div class="name">
+            <div class="title">
+                <h2>STATUS</h2>
+            </div>
+            <div class="b">
+                <p>GPS: Lat:<span id="latitude">%LATITUDE%</span> | Long:<span id="longitude">%LONGITUDE%</span>  <br> Server: <span id="server-status"></span> </p>
+            </div>
+        </div>
+        <div class="name">
+            <div class="title">
+                <h2>REPORT</h2>
+            </div>
+            <div class="b">
+                <p></p>
+            </div>
+        </div>
+    </header>
+
+</body>
+</html>
+
+<script>
+    setInterval(function() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("latitude").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "/latitude", true);
+      xhttp.send();
+    }, 1000);
+
+    setInterval(function() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("longitude").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "/longitude", true);
+      xhttp.send();
+    }, 1000);
+
+    setInterval(function() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {
+            document.getElementById("server-status").innerHTML = "Connected";
+          } else {
+            document.getElementById("server-status").innerHTML = "Not Connected";
+          }
+        }
+      };
+      xhttp.open("GET", "/check-connection", true);
+      xhttp.send();
+    }, 1000);
+
+    // setInterval(function() {
+    //   var xhttp = new XMLHttpRequest();
+    //   xhttp.onreadystatechange = function() {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //       var serverStatus = document.getElementById("server-status");
+    //       serverStatus.innerHTML = this.responseText;
+    //     }
+    //   };
+    //   xhttp.open("GET", "/check-connection", true);
+    //   xhttp.send();
+    // }, 1000);
+
+    // setInterval(function() {
+    //   var xhttp = new XMLHttpRequest();
+    //   xhttp.onreadystatechange = function() {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //       // Menampilkan pesan "connected" jika terkoneksi ke server dan "not connected" jika tidak terkoneksi
+    //       var serverStatus = document.getElementById("server-status");
+    //       if (this.responseText == "connected") {
+    //         serverStatus.innerHTML = "connected";
+    //       } else {
+    //         serverStatus.innerHTML = "not connected";
+    //       }
+    //     }
+    //   };
+    //   xhttp.open("GET", "/check-connection", true);
+    //   xhttp.send();
+    // }, 10000); 
+  </script>
+
+<style>
+    
+</style>

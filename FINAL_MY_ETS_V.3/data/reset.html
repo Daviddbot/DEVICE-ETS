@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ESP32 WiFi Manager</title>
+  </head>
+  <body>
+    <h1>ESP32 WiFi Manager</h1>
+    <p>Alamat IP: <span id="ip-address"></span></p>
+    <button onclick="showIP()">Tampilkan Alamat IP</button>
+    <br>
+    <br>
+    <a href="/reset">Reset WiFi</a>
+    <script>
+      function showIP() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("ip-address").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "/get-ip-address", true);
+        xhttp.send();
+      }
+    </script>
+  </body>
+</html>

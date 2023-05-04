@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header{
+    background-size: cover;
+    background-position: center;
+    margin-top: 0%;
+}
+
+.ndas{
+    background-color: rgb(9, 9, 41);
+    color: #fff; 
+    width: 100%;
+    padding: 25px 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+}
+
+.name{
+    align-items: center;
+    width: 90%;
+    background: rgb(9, 114, 114);
+    padding: 10px 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin: 15px auto;
+    display: block;
+
+}
+
+.title {
+    /* border: 1px solid #fff; */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.title h1{
+    font-family: sans-serif;
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+}
+.title h2{
+    font-family: sans-serif;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.title h3{
+  font-family: sans-serif;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.m{
+    width: 100%;
+
+}
+.b{
+    width: 95%;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.b p{
+    font-size: 15px;
+
+}
+.button{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+.btn1{
+    width: 120px;
+    padding: 10px 0;
+    text-align: center;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6s ease;
+    border-radius: 8px;
+    background-color: rgb(40, 190, 35);
+}
+
+.btn1:hover{
+    background-color:rgb(9, 114, 114);
+    color: #fff;
+}
+.btn2{
+    width: 120px;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6s ease;
+    border-radius: 8px;
+    background-color: rgb(201, 163, 37);
+}
+.btn2:hover{
+    background-color:rgb(9, 114, 114);
+    color: #fff;
+}
+.btn3{
+    width: 120px;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6s ease;
+    border-radius: 8px;
+    background-color: rgb(218, 17, 17);
+}
+.btn3:hover{
+    background-color:rgb(9, 114, 114);
+    color: #fff;
+}
+.btn4{
+    width: 120px;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6s ease;
+    border-radius: 8px;
+    background-color: rgb(15, 35, 221);
+}
+.btn4:hover{
+    background-color:rgb(9, 114, 114);
+    color: #fff;
+}
+.dulekan {
+    width: 96%;
+    margin: 0px auto;
+    background: rgb(9, 114, 114);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 25px;
+    display: block;
+}
+.dulekan a{
+    width: 100%;
+    color: #ffffff;
+    text-decoration: none;
+    list-style-type: none;
+    padding-top: 43px;
+    padding-bottom: 43px;
+}
+
+  .card{
+    display: block;
+    margin-left: 15%;
+  }
+  .card-grid { 
+    max-width: 800px; 
+    margin: 0 auto; 
+    display: grid; 
+    grid-gap: 2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  
+  .card-title { 
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #034078;
+  }
+  
+  input[type=submit] {
+    width: 80%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+  
+  input[type=submit]:hover {
+    background-color: #1282A2;
+  }
+  
+  input[type=text], input[type=number], select {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+  .value{
+    font-size: 1.2rem;
+    color: #1282A2;  
+  }
+  .state {
+    font-size: 1.2rem;
+    color: #1282A2;
+  }
+  button {
+    border: none;
+    color: #FEFCFB;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    width: 100px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+  }
+  .button-on {
+    background-color: #034078;
+  }
+  .button-on:hover {
+    background-color: #1282A2;
+  }
+  .button-off {
+    background-color: #858585;
+  }
+  .button-off:hover {
+    background-color: #252524;
+  } 
