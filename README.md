@@ -20,19 +20,19 @@ Projek My ETS dapat digunakan dalam berbagai aplikasi, antara lain:
 Dengan demikian, projek My ETS memberikan kemudahan dan keuntungan dalam memantau, melacak, dan mengelola objek atau aset dengan efisien, serta memberikan data lokasi yang akurat.
 
 # ALAT DAN BAHAN 
-1.ESP32
-2.GPS NEO 6M
-3.RFID RDM6300
-4.SD CARD 
-5.LED
-6.RESISTOR 220ohm
-7.PCB
-8.ANTENA GPS
-9.ANTENA RFID RDM6300
-10.RFID TAG
+1.  ESP32
+2.  GPS NEO 6M
+3.  RFID RDM6300
+4.  SD CARD 
+5.  LED
+6.  RESISTOR 220ohm
+7.  PCB
+8.  ANTENA GPS
+9.  ANTENA RFID RDM6300
+10. RFID TAG
 
-#SOFTWARE YANG SAYA GUNAKAN
-1.ARDUINO IDE 
-2.VISUAL STUDIO CODE 
-3.XAMPP
+# SOFTWARE YANG SAYA GUNAKAN
+1.  ARDUINO IDE 
+2.  VISUAL STUDIO CODE 
+3.  XAMPP
 
