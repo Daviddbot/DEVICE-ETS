@@ -19,6 +19,7 @@ Projek My ETS dapat digunakan dalam berbagai aplikasi, antara lain:
 
 Dengan demikian, projek My ETS memberikan kemudahan dan keuntungan dalam memantau, melacak, dan mengelola objek atau aset dengan efisien, serta memberikan data lokasi yang akurat.
 
+
 # ALAT DAN BAHAN 
 1.  ESP32
 2.  GPS NEO 6M
